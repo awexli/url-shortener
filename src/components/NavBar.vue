@@ -9,7 +9,7 @@
       <!-- Burger -->
       <a
         role="button"
-        v-bind:class="{'navbar-burger':true, 'is-active':isActive}"
+        v-bind:class="{ 'navbar-burger': true, 'is-active': isActive }"
         aria-label="menu"
         aria-expanded="false"
         v-on:click="handleBurgerClick"
@@ -21,7 +21,7 @@
     </div>
 
     <!-- Menu -->
-    <div v-bind:class="{'navbar-menu':true, 'is-active':isActive}">
+    <div v-bind:class="{ 'navbar-menu': true, 'is-active': isActive }">
       <div class="navbar-start">
         <a href="#" class="navbar-item">Features</a>
         <a href="#" class="navbar-item">Pricing</a>
@@ -45,32 +45,25 @@ export default {
   data() {
     return {
       isActive: false,
-    }
+    };
   },
   methods: {
     handleBurgerClick: function() {
       this.isActive = !this.isActive;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import '../styles/style-guide.scss';
+
 $item-percentage: 80%;
 
 .navbar {
   padding: 1em 1em;
   //border: 1px solid red;
-
-  &-item {
-    @media screen and (max-width: 1023px) {
-      color: white;
-      font-weight: 600;
-      margin: 1em 0;
-    }
-  }
 
   &-menu {
     @media screen and (max-width: 1023px) {
@@ -78,6 +71,21 @@ $item-percentage: 80%;
       border-radius: 10px;
       width: 95%;
       margin: auto;
+    }
+  }
+
+  &-item {
+    font-weight: 600;
+    color: $gray-violet;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }  
+
+    @media screen and (max-width: 1023px) {
+      color: white;
+      margin: 1em 0;
     }
   }
 
@@ -91,12 +99,30 @@ $item-percentage: 80%;
     }
   }
 
+  &-end {
+    :first-child {
+      margin-right: 1em;
+    }
+  }
+
   &-signup {
-    @media screen and (max-width: 1023px) {
+    background-color: $cyan;
+    border-radius: 2em;
+    width: 7rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    // resuable
+    &:hover {
       background-color: $cyan;
+      color: white;
+      filter: opacity(45%);
+    }
+
+    @media screen and (max-width: 1023px) {
       width: $item-percentage;
-      margin: auto;
-      border-radius: 2em;
       margin-bottom: 2em;
     }
   }
