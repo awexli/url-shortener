@@ -62,7 +62,7 @@ export default {
 $item-percentage: 80%;
 
 .navbar {
-  padding: 1em 1em;
+  padding: 1em 1em 0 1em;
   //border: 1px solid red;
 
   &-menu {
@@ -81,7 +81,12 @@ $item-percentage: 80%;
     &:hover {
       background-color: white;
       color: black;
-    }  
+    }
+
+    &:focus {
+      background-color: white;
+      color: black;
+    }
 
     @media screen and (max-width: 1023px) {
       color: white;
