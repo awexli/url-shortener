@@ -34,7 +34,7 @@ export default {
     // margin-top: 2.5em;
     // margin-bottom: 2.5em;
     // transform: scale(1.3);
-    padding-left: 1em;
+    padding-left: 10px;
   }
 
   &__left {
