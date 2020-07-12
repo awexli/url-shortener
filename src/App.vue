@@ -2,18 +2,21 @@
   <div id="app">
     <NavBar />
     <GetStarted />
+    <StatsSection />
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
 import GetStarted from './components/GetStarted.vue';
+import StatsSection from './components/StatsSection.vue';
 
 export default {
   name: 'App',
-  components: {
+    components: {
     NavBar,
     GetStarted,
+    StatsSection,
   },
 };
 </script>

@@ -8,7 +8,9 @@
       />
     </div>
     <div class="get-started__left column">
-      <p class="get-started__title title">More than just shorter links</p>
+      <p class="get-started__title title">
+        <span>More than just </span><span>shorter links</span>
+      </p>
       <p class="get-started__subtitle subtitle">
         Build your brand’s recognition and get detailed insights on how your
         links are performing.
@@ -28,13 +30,25 @@ export default {
 @import '../styles/style-guide.scss';
 
 .get-started {
+  display: grid;
+  grid-template-areas: 'right' 'left';
+  padding: 0 1.5em;
+
+  @media screen and (min-width: 1024px) {
+    grid-template-areas: 'left right';
+    grid-template-columns: 1fr 1fr;
+  }
 
   &__image {
     // margin-left: 5em;
     // margin-top: 2.5em;
     // margin-bottom: 2.5em;
     // transform: scale(1.3);
-    padding-left: 1em;
+    padding-left: 10px;
+
+    @media screen and (min-width: 1024px) {
+      padding-left: 0;
+    }
   }
 
   &__left {
@@ -42,11 +56,32 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    grid-area: left;
+
+    @media screen and (min-width: 1024px) {
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  &__right {
+    grid-area: right;
   }
 
   &__title {
+    max-width: 550px;
+
     @media screen and (min-width: 375px) {
       font-size: 2.5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 3.3rem;
+      text-align: start;
+    }
+
+    @media screen and (min-width: 1440px) {
+      font-size: 4.0rem;
     }
   }
 
@@ -57,6 +92,13 @@ export default {
 
     @media screen and (min-width: 375px) {
       font-size: 18px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      text-align: start;
+      line-height: 1.7;
+      padding: 1rem 0;
+      max-width: 480px;
     }
   }
 

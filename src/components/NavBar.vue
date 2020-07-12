@@ -23,14 +23,14 @@
     <!-- Menu -->
     <div v-bind:class="{ 'navbar-menu': true, 'is-active': isActive }">
       <div class="navbar-start">
-        <a href="#" class="navbar-item">Features</a>
-        <a href="#" class="navbar-item">Pricing</a>
-        <a href="#" class="navbar-item">Resources</a>
+        <a class="navbar-item">Features</a>
+        <a class="navbar-item">Pricing</a>
+        <a class="navbar-item">Resources</a>
         <div class="navbar-divider"></div>
       </div>
       <div class="navbar-end">
-        <a href="" class="navbar-item">Login</a>
-        <a href="" class="navbar-item navbar-signup">Sign up</a>
+        <a class="navbar-item">Login</a>
+        <a class="navbar-item navbar-signup">Sign up</a>
       </div>
     </div>
   </nav>
@@ -64,13 +64,23 @@ $item-percentage: 80%;
 .navbar {
   padding: 1em 1em 0 1em;
   //border: 1px solid red;
+  &-brand {
+    align-items: center;
+  }
 
   &-menu {
+    position: relative;
     @media screen and (max-width: 1023px) {
       background-color: $dark-violet;
       border-radius: 10px;
       width: 95%;
       margin: auto;
+    }
+  }
+
+  &-menu.is-active {
+    @media screen and (max-width: 1023px) {
+      position: absolute;
     }
   }
 
