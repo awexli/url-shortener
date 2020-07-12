@@ -2,7 +2,6 @@
   <div id="app">
     <NavBar />
     <GetStarted />
-    <LinkForm />
     <StatsSection />
   </div>
 </template>
@@ -10,7 +9,6 @@
 <script>
 import NavBar from './components/NavBar.vue';
 import GetStarted from './components/GetStarted.vue';
-import LinkForm from './components/LinkForm.vue';
 import StatsSection from './components/StatsSection.vue';
 
 export default {
@@ -18,7 +16,6 @@ export default {
     components: {
     NavBar,
     GetStarted,
-    LinkForm,
     StatsSection,
   },
 };
