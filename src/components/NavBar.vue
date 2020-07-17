@@ -79,9 +79,9 @@ $item-percentage: 80%;
   }
 
   &-menu.is-active {
-    @media screen and (max-width: 1023px) {
-      position: absolute;
-    }
+    // @media screen and (max-width: 1023px) {
+    //   position: absolute;
+    // }
   }
 
   &-item {

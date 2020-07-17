@@ -1,24 +1,22 @@
 <template>
-  <div class="link-form">
-    <form action="" class="link-form__form">
-      <div class="link-form__field field">
-        <div class="link-form__control control">
-          <input
-            class="link-form__input input"
-            type="text"
-            placeholder="Shorten a link here..."
-          />
-        </div>
+  <form class="link-form">
+    <div class="link-form__field field">
+      <div class="link-form__control control">
+        <input
+          class="link-form__input input"
+          type="text"
+          placeholder="Shorten a link here..."
+        />
       </div>
-      <div class="link-form__field field">
-        <div class="link-form__control control">
-          <button class="link-form__button button">
-            Shorten it!
-          </button>
-        </div>
+    </div>
+    <div class="link-form__field field">
+      <div class="link-form__control control">
+        <button class="link-form__button button">
+          Shorten it!
+        </button>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </template>
 
 <script>
@@ -27,7 +25,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import '../styles/style-guide.scss';
 
 .link-form {
