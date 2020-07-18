@@ -15,7 +15,7 @@
         Build your brand’s recognition and get detailed insights on how your
         links are performing.
       </p>
-      <a href="#" class="get-started__button button">Get Started</a>
+      <a class="get-started__button button">Get Started</a>
     </div>
   </div>
 </template>
@@ -28,44 +28,51 @@ export default {
 
 <style scoped lang="scss">
 @import '../styles/style-guide.scss';
-
 .get-started {
   display: grid;
   grid-template-areas: 'right' 'left';
-  padding: 0 1.5em;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     grid-template-areas: 'left right';
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.3fr;
+    margin: 0 0 0 10%;
   }
 
-  &__image {
-    // margin-left: 5em;
-    // margin-top: 2.5em;
-    // margin-bottom: 2.5em;
-    // transform: scale(1.3);
-    padding-left: 10px;
-
-    @media screen and (min-width: 1024px) {
-      padding-left: 0;
-    }
+  @media screen and (min-width: 1024px) {
+    margin: 0 0 0 10%;
   }
 
   &__left {
+    grid-area: left;
     padding: 0.75rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-area: left;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 768px) {
       justify-content: center;
       align-items: flex-start;
+      padding: 0.75rem 0;
     }
   }
 
   &__right {
     grid-area: right;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  &__image {
+    margin-left: 5em;
+    margin-top: 2.5em;
+    margin-bottom: 3.5em;
+    transform: scale(1.3);
+
+    @media screen and (min-width: 768px) {
+      transform: scale(1.1);
+      margin-left: 4em;
+      margin-bottom: 1em;
+    }
   }
 
   &__title {
@@ -75,9 +82,12 @@ export default {
       font-size: 2.5rem;
     }
 
+    @media screen and (min-width: 768px) {
+      text-align: start;
+    }
+
     @media screen and (min-width: 1024px) {
       font-size: 3.3rem;
-      text-align: start;
     }
 
     @media screen and (min-width: 1440px) {
@@ -86,18 +96,12 @@ export default {
   }
 
   &__subtitle {
-    color: $gray-violet;
-    padding: 1rem 1rem;
-    font-size: 16px;
-
-    @media screen and (min-width: 375px) {
-      font-size: 18px;
+    @media screen and (min-width: 768px) {
+      text-align: start;
+      padding: 1rem 0;
     }
 
     @media screen and (min-width: 1024px) {
-      text-align: start;
-      line-height: 1.7;
-      padding: 1rem 0;
       max-width: 480px;
     }
   }

@@ -1,6 +1,13 @@
 <template>
   <div class="stats">
     <LinkForm />
+    <div class="stats__advanced container">
+      <h2 class="title">Advanced Statistics</h2>
+      <p class="subtitle">
+        Track how your links are performing across the web with our advanced
+        statistics dashboard.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -30,6 +37,10 @@ export default {
     left: 0;
     top: 22%;
     z-index: -1;
+
+    @media screen and (min-width: 1024px) {
+      top: 20%;
+    }
   }
 }
 </style>

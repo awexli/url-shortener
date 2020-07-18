@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <!-- Logo -->
-      <a href="#" class="navbar-item">
+      <a class="navbar-item">
         <img alt="Vue logo" src="../assets/images/logo.svg" />
       </a>
 
@@ -63,25 +63,27 @@ $item-percentage: 80%;
 
 .navbar {
   padding: 1em 1em 0 1em;
-  //border: 1px solid red;
-  &-brand {
-    align-items: center;
+  
+  @media screen and (min-width: 768px) {
+    margin: 0 10%;
+    padding: 1em 0;
   }
 
   &-menu {
-    position: relative;
     @media screen and (max-width: 1023px) {
       background-color: $dark-violet;
       border-radius: 10px;
-      width: 95%;
+      width: 92%;
       margin: auto;
     }
   }
 
   &-menu.is-active {
-    // @media screen and (max-width: 1023px) {
-    //   position: absolute;
-    // }
+    @media screen and (min-width: 375px) and (max-width: 1023px) {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
   }
 
   &-item {
