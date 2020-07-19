@@ -15,14 +15,19 @@
         Build your brand’s recognition and get detailed insights on how your
         links are performing.
       </p>
-      <a class="get-started__button button">Get Started</a>
+      <CyanButton :buttonText="'Get Started'" />
     </div>
   </div>
 </template>
 
 <script>
+import CyanButton from './CyanButton.vue';
+
 export default {
   name: 'GetStarted',
+  components: {
+    CyanButton,
+  },
 };
 </script>
 
@@ -103,22 +108,6 @@ export default {
 
     @media screen and (min-width: 1024px) {
       max-width: 480px;
-    }
-  }
-
-  &__button {
-    background-color: $cyan;
-    border-radius: 2em;
-    border-color: transparent;
-    width: 9rem;
-    color: white;
-    transition: background-color ease 0.1s;
-    -webkit-transition: background-color ease 0.1s;
-    -ms-transition: background-color ease 0.1s;
-
-    // resuable
-    &:hover {
-      background-color: $button-hover-color;
     }
   }
 }

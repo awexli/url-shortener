@@ -11,9 +11,7 @@
     </div>
     <div class="link-form__field field">
       <div class="link-form__control control">
-        <button class="link-form__button button">
-          Shorten It!
-        </button>
+        <CyanButton class="link-form__button" :buttonText="'Shorten It!'" />
       </div>
     </div>
     <picture>
@@ -31,8 +29,13 @@
 </template>
 
 <script>
+import CyanButton from './CyanButton.vue';
+
 export default {
   name: 'LinkForm',
+  components: {
+    CyanButton,
+  },
 };
 </script>
 
@@ -69,10 +72,8 @@ export default {
   }
 
   &__button {
-    width: 100%;
-    background-color: $cyan;
-    border-color: $cyan;
-    color: white;
+    width: 100% !important;
+    border-radius: 5px !important;
   }
 
   .field:not(:last-child) {

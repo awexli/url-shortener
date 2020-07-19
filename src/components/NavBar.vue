@@ -30,17 +30,19 @@
       </div>
       <div class="navbar-end">
         <a class="navbar-item">Login</a>
-        <a class="navbar-item navbar-signup">Sign up</a>
+        <CyanButton class="navbar-item navbar-signup" :buttonText="'Sign up'" />
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import CyanButton from './CyanButton.vue';
+
 export default {
   name: 'Navbar',
-  props: {
-    msg: String,
+  components: {
+    CyanButton,
   },
   data() {
     return {
@@ -63,7 +65,7 @@ $item-percentage: 80%;
 
 .navbar {
   padding: 1em 1em 0 1em;
-  
+
   @media screen and (min-width: 768px) {
     margin: 0 10%;
     padding: 1em 0;
@@ -123,20 +125,7 @@ $item-percentage: 80%;
   }
 
   &-signup {
-    background-color: $cyan;
-    border-radius: 2em;
-    width: 7rem;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    color: white;
-
-    // resuable
-    &:hover {
-      background-color: $cyan;
-      color: white;
-      filter: opacity(45%);
-    }
 
     @media screen and (max-width: 1023px) {
       width: $item-percentage;

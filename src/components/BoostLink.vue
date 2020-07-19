@@ -13,14 +13,19 @@
     </picture>
     <div class="boost__content-container">
       <p class="boost__title title">Boost your links today</p>
-      <button class="boost__button button">Get Started</button>
+      <CyanButton :buttonText="'Get Started'" />
     </div>
   </div>
 </template>
 
 <script>
+import CyanButton from './CyanButton.vue';
+
 export default {
   name: 'BoostLink',
+  components: {
+    CyanButton,
+  },
 };
 </script>
 
@@ -46,22 +51,6 @@ export default {
   &__title {
     font-size: 1.7rem;
     color: white;
-  }
-
-  // resuable
-  &__button {
-    background-color: $cyan;
-    border-radius: 2em;
-    border-color: transparent;
-    width: 9rem;
-    color: white;
-    transition: background-color ease 0.1s;
-    -webkit-transition: background-color ease 0.1s;
-    -ms-transition: background-color ease 0.1s;
-
-    &:hover {
-      background-color: $button-hover-color;
-    }
   }
 }
 </style>
