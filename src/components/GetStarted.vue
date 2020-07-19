@@ -109,14 +109,16 @@ export default {
   &__button {
     background-color: $cyan;
     border-radius: 2em;
+    border-color: transparent;
     width: 9rem;
     color: white;
+    transition: background-color ease 0.1s;
+    -webkit-transition: background-color ease 0.1s;
+    -ms-transition: background-color ease 0.1s;
 
     // resuable
     &:hover {
-      background-color: $cyan;
-      color: white;
-      filter: opacity(45%);
+      background-color: $button-hover-color;
     }
   }
 }

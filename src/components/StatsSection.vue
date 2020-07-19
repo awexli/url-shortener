@@ -10,52 +10,13 @@
     </div>
 
     <div class="stats__cards-container">
-      <div class="stats__card">
+      <div class="stats__card" v-for="card in cards" :key="card.id">
         <div class="stats__icon-container">
-          <img
-            src="../assets/images/icon-brand-recognition.svg"
-            alt=""
-            class="stats__card-icon"
-          />
+          <img :src="card.src" :alt="card.alt" class="stats__card-icon" />
         </div>
         <div class="stats__card-description">
-          <h3 class="stats__card-title title">Brand Recognition</h3>
-          <p class="stats__card-subtitle subtitle">
-            Boost your brand recognition with each click. Generic links don’t
-            mean a thing. Branded links help instil confidence in your content.
-          </p>
-        </div>
-      </div>
-      <div class="stats__card">
-        <div class="stats__icon-container">
-          <img
-            src="../assets/images/icon-detailed-records.svg"
-            alt=""
-            class="stats__card-icon"
-          />
-        </div>
-        <div class="stats__card-description">
-          <h3 class="stats__card-title title">Detailed Records</h3>
-          <p class="stats__card-subtitle subtitle">
-            Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions.
-          </p>
-        </div>
-      </div>
-      <div class="stats__card">
-        <div class="stats__icon-container">
-          <img
-            src="../assets/images/icon-fully-customizable.svg"
-            alt=""
-            class="stats__card-icon"
-          />
-        </div>
-        <div class="stats__card-description">
-          <h3 class="stats__card-title title">Fully Customizable</h3>
-          <p class="stats__card-subtitle subtitle">
-            Improve brand awareness and content discoverability through
-            customizable links, supercharging audience engagement.
-          </p>
+          <h3 class="stats__card-title title">{{ card.title }}</h3>
+          <p class="stats__card-subtitle subtitle">{{ card.subtitle }}</p>
         </div>
       </div>
     </div>
@@ -70,6 +31,36 @@ export default {
   components: {
     LinkForm,
   },
+  data() {
+    return {
+      cards: [
+        {
+          id: 1,
+          src: require('../assets/images/icon-brand-recognition.svg'),
+          alt: 'Icon of a bar and line graph trending up',
+          title: 'Brand Recognition',
+          subtitle:
+            'Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.',
+        },
+        {
+          id: 2,
+          src: require('../assets/images/icon-detailed-records.svg'),
+          alt: 'Icon of a circular meter',
+          title: 'Detailed Records',
+          subtitle:
+            'Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.',
+        },
+        {
+          id: 3,
+          src: require('../assets/images/icon-fully-customizable.svg'),
+          alt: 'Icon of a various drawing tools',
+          title: 'Fully Customizable',
+          subtitle:
+            'Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.',
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -79,6 +70,7 @@ $card-padding: 1em;
 
 .stats {
   position: relative;
+  padding-bottom: 5rem;
 
   // gray background
   &::before {
@@ -92,7 +84,7 @@ $card-padding: 1em;
     z-index: -1;
 
     @media screen and (min-width: 1024px) {
-      //top: 20%;
+      top: 8%;
     }
   }
 
@@ -116,6 +108,7 @@ $card-padding: 1em;
       width: 8px;
       display: block;
       position: absolute;
+      z-index: -1;
 
       // center line vertical
       margin-left: auto;
@@ -125,8 +118,6 @@ $card-padding: 1em;
       right: 0;
       text-align: center;
       // end center line
-
-      z-index: -1;
 
       // cyan line horizontal
       @media screen and (min-width: 1440px) {
@@ -163,6 +154,7 @@ $card-padding: 1em;
     justify-content: center;
     height: 265px;
     max-width: 350px;
+    border-radius: $border-radius;
 
     @media screen and (min-width: 1440px) {
       justify-content: flex-start;
@@ -181,16 +173,20 @@ $card-padding: 1em;
   &__icon-container {
     background-color: $dark-violet;
     border-radius: 50%;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+
     width: 90px;
     height: 90px;
+
     display: grid;
     place-items: center;
+
     position: absolute;
     top: -45px;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
-    border-collapse: collapse;
-    transition: transform ease 0.2s;
     
+    transition: transform ease 0.2s;
+
     &:hover {
       transform: translateY(-4px);
     }

@@ -3,6 +3,7 @@
     <NavBar />
     <GetStarted />
     <StatsSection />
+    <BoostLink />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import NavBar from './components/NavBar.vue';
 import GetStarted from './components/GetStarted.vue';
 import StatsSection from './components/StatsSection.vue';
+import BoostLink from './components/BoostLink';
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
     NavBar,
     GetStarted,
     StatsSection,
+    BoostLink,
   },
 };
 </script>
