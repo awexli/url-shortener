@@ -91,14 +91,15 @@ $item-percentage: 80%;
   &-item {
     font-weight: 600;
     color: $gray-violet;
-
+    transition: color ease 0.2s;
+    
     &:hover {
-      background-color: white;
+      background-color: transparent;
       color: black;
     }
 
     &:focus {
-      background-color: white;
+      background-color: transparent;
       color: black;
     }
 
