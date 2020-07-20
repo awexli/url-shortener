@@ -123,7 +123,6 @@ export default {
   }
 
   &__link-list {
-
     :last-of-type {
       padding-bottom: 0;
     }
