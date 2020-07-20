@@ -25,13 +25,12 @@ export default {
   border-color: transparent;
   width: 9rem;
   color: white !important;
-  transition: background-color ease 0.1s;
-  -webkit-transition: background-color ease 0.1s;
-  -ms-transition: background-color ease 0.1s;
+  transition: background-color ease 0.1s !important;
+  -webkit-transition: background-color ease 0.1s !important;
+  -ms-transition: background-color ease 0.1s !important;
 
   &:hover {
-    background-color: $button-hover-color;
-    color: white;
+    background-color: $button-hover-color !important;
   }
 }
 </style>

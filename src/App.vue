@@ -4,14 +4,16 @@
     <GetStarted />
     <StatsSection />
     <BoostLink />
+    <FooterSection />
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue';
-import GetStarted from './components/GetStarted.vue';
-import StatsSection from './components/StatsSection.vue';
+import NavBar from './components/NavBar';
+import GetStarted from './components/GetStarted';
+import StatsSection from './components/StatsSection';
 import BoostLink from './components/BoostLink';
+import FooterSection from './components/FooterSection';
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     GetStarted,
     StatsSection,
     BoostLink,
+    FooterSection
   },
 };
 </script>
