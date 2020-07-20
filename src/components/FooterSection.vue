@@ -96,7 +96,6 @@ export default {
   }
 
   &__link-container {
-    //background-color: red;
     padding: 3em 0;
 
     :nth-child(1) {
@@ -124,7 +123,6 @@ export default {
   }
 
   &__link-list {
-    //background-color: violet;
 
     :last-of-type {
       padding-bottom: 0;
