@@ -1,4 +1,4 @@
-# url-short
+# Frontend Mentor - Shortly URL shortening API Challenge
 
 ## Project setup
 
