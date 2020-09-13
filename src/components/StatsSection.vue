@@ -80,10 +80,14 @@ $card-padding: 1em;
     height: 100%;
     width: 100%;
     left: 0;
-    //top: 22%;
+    top: 5%;
     z-index: -1;
 
     @media screen and (min-width: 1024px) {
+      top: 4%;
+    }
+
+    @media screen and (min-width: 1440px) {
       top: 8%;
     }
   }
@@ -184,7 +188,7 @@ $card-padding: 1em;
 
     position: absolute;
     top: -45px;
-    
+
     transition: transform ease 0.2s;
 
     &:hover {

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import NavBar from './components/NavBar';
+import NavBar from './components/0_nav/NavBar';
 import GetStarted from './components/GetStarted';
 import StatsSection from './components/StatsSection';
 import BoostLink from './components/BoostLink';
