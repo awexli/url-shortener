@@ -10,10 +10,10 @@
 
 <script>
 import NavBar from './components/0_nav/NavBar';
-import GetStarted from './components/GetStarted';
-import StatsSection from './components/StatsSection';
-import BoostLink from './components/BoostLink';
-import FooterSection from './components/FooterSection';
+import GetStarted from './components/1_get-started/GetStarted';
+import StatsSection from './components/2_stats-section/StatsSection';
+import BoostLink from './components/3_boost-section/BoostLink';
+import FooterSection from './components/4_footer/FooterSection';
 
 export default {
   name: 'App',

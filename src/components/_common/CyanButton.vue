@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/style-guide.scss';
+@import '@/styles/style-guide.scss';
 
 .cyan-button {
   background-color: $cyan;

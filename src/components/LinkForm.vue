@@ -17,11 +17,11 @@
     <picture>
       <source
         media="(min-width: 768px)"
-        srcset="../assets/images/bg-shorten-desktop.svg"
+        srcset="@/assets/images/bg-shorten-desktop.svg"
       />
       <img
         class="link-form__background"
-        src="../assets/images/bg-shorten-mobile.svg"
+        src="@/assets/images/bg-shorten-mobile.svg"
         alt=""
       />
     </picture>
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import CyanButton from './CyanButton.vue';
+import CyanButton from '@/components/_common/CyanButton.vue';
 
 export default {
   name: 'LinkForm',
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../styles/style-guide.scss';
+@import '@/styles/style-guide.scss';
 
 .link-form {
   margin: 3em 10%;

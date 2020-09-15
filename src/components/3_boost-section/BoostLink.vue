@@ -3,12 +3,12 @@
     <picture>
       <source
         media="(min-width: 768px)"
-        srcset="../assets/images/bg-boost-desktop.svg"
+        srcset="@/assets/images/bg-boost-desktop.svg"
       />
       <img
         class="boost__background"
-        src="../assets/images/bg-boost-mobile.svg"
-        alt=""
+        src="@/assets/images/bg-boost-mobile.svg"
+        alt="background"
       />
     </picture>
     <div class="boost__content-container">
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import CyanButton from './CyanButton.vue';
+import CyanButton from '@/components/_common/CyanButton.vue';
 
 export default {
   name: 'BoostLink',
@@ -30,7 +30,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/style-guide.scss';
+@import '@/styles/style-guide.scss';
+
 .boost {
   padding: 5rem 0.75rem;
   background-color: $dark-violet;

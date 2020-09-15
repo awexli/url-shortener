@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import CyanButton from '@/components/CyanButton.vue';
+import CyanButton from '@/components/_common/CyanButton.vue';
 
 export default {
   name: 'NavBarMenu',

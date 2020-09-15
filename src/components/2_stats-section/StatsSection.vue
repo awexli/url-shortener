@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import LinkForm from './LinkForm.vue';
+import LinkForm from '@/components/LinkForm.vue';
 
 export default {
   name: 'StatsSection',
@@ -36,7 +36,7 @@ export default {
       cards: [
         {
           id: 1,
-          src: require('../assets/images/icon-brand-recognition.svg'),
+          src: require('@/assets/images/icon-brand-recognition.svg'),
           alt: 'Icon of a bar and line graph trending up',
           title: 'Brand Recognition',
           subtitle:
@@ -44,7 +44,7 @@ export default {
         },
         {
           id: 2,
-          src: require('../assets/images/icon-detailed-records.svg'),
+          src: require('@/assets/images/icon-detailed-records.svg'),
           alt: 'Icon of a circular meter',
           title: 'Detailed Records',
           subtitle:
@@ -52,7 +52,7 @@ export default {
         },
         {
           id: 3,
-          src: require('../assets/images/icon-fully-customizable.svg'),
+          src: require('@/assets/images/icon-fully-customizable.svg'),
           alt: 'Icon of a various drawing tools',
           title: 'Fully Customizable',
           subtitle:
@@ -65,7 +65,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/style-guide.scss';
+@import '@/styles/style-guide.scss';
 $card-padding: 1em;
 
 .stats {

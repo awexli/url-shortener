@@ -2,7 +2,7 @@
   <div class="get-started columns">
     <div class="get-started__right column">
       <img
-        src="../assets/images/illustration-working.svg"
+        src="@/assets/images/illustration-working.svg"
         alt="Human working in front of a desk"
         class="get-started__image"
       />
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import CyanButton from './CyanButton.vue';
+import CyanButton from '@/components/_common/CyanButton.vue';
 
 export default {
   name: 'GetStarted',
@@ -32,7 +32,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../styles/style-guide.scss';
+@import '@/styles/style-guide.scss';
+
 .get-started {
   display: grid;
   grid-template-areas: 'right' 'left';
