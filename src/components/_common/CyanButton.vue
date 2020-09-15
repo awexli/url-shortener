@@ -1,5 +1,8 @@
 <template>
-  <button class="cyan-button button">
+  <button 
+    class="cyan-button button"
+    @click="$emit('handle-shorten-link')"
+  >
     {{ buttonText }}
   </button>
 </template>

@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import LinkForm from '@/components/LinkForm.vue';
+import LinkForm from '@/components/5_link-form/LinkForm.vue';
 
 export default {
   name: 'StatsSection',
@@ -94,6 +94,7 @@ $card-padding: 1em;
 
   &__advanced {
     max-width: 490px;
+    margin-top: 2em;
   }
 
   &__cards-container {
