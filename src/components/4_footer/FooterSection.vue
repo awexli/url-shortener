@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__branding-container">
-      <img src="../assets/images/logo-white.svg" alt="Shortly Logo" />
+      <img src="@/assets/images/logo-white.svg" alt="Shortly Logo" />
     </div>
     <div class="footer__link-container">
       <ul class="footer__link-list">
@@ -29,7 +29,7 @@
         <li class="footer__icon">
           <a>
             <img
-              src="../assets/images/icon-facebook.svg"
+              src="@/assets/images/icon-facebook.svg"
               alt="facebook icon"
               class="footer__facebook"
             />
@@ -38,7 +38,7 @@
         <li class="footer__icon">
           <a>
             <img
-              src="../assets/images/icon-twitter.svg"
+              src="@/assets/images/icon-twitter.svg"
               alt="twitter icon"
               class="footer__twitter"
             />
@@ -47,7 +47,7 @@
         <li class="footer__icon">
           <a>
             <img
-              src="../assets/images/icon-pinterest.svg"
+              src="@/assets/images/icon-pinterest.svg"
               alt="pinterest icon"
               class="footer__pinterest"
             />
@@ -56,7 +56,7 @@
         <li class="footer__icon">
           <a>
             <img
-              src="../assets/images/icon-instagram.svg"
+              src="@/assets/images/icon-instagram.svg"
               alt="instagram icon"
               class="footer__instagram"
             />
@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/style-guide.scss';
+@import '@/styles/style-guide.scss';
 
 .footer {
   display: flex;

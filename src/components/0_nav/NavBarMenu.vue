@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import CyanButton from '@/components/CyanButton.vue';
+import CyanButton from '@/components/_common/CyanButton.vue';
 
 export default {
   name: 'NavBarMenu',
@@ -55,11 +55,12 @@ $item-percentage: 80%;
 
     &:hover {
       background-color: transparent;
-      color: black;
+      @media screen and (min-width: 1023px) {
+        color: black;
+      }
     }
 
     &:focus {
-      background-color: transparent;
       color: black;
     }
 
