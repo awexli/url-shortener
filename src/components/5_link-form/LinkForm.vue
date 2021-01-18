@@ -63,7 +63,7 @@ export default {
       links: [],
       link: {
         input: '',
-        relLink: '',
+        shortLink: '',
       },
       hasNoLink: false,
       isLoading: false,
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     async handleShortenLink() {
-      if (this.link.input === '') {
+      if (!this.link.input.length) {
         this.hasNoLink = true;
         return;
       }
@@ -84,10 +84,8 @@ export default {
       this.hasNoLink = false;
       this.isLoading = true;
       try {
-        const response = await axios.post('https://rel.ink/api/links/', {
-          url: this.link.input,
-        });
-        this.link.relLink = 'https://rel.ink/' + response.data.hashid;
+        const response = await axios.post(`https://api.shrtco.de/v2/shorten?url=${this.link.input}`);
+        this.link.shortLink = response.data.result.short_link;
         this.links.push(this.link);
       } catch (error) {
         alert(error);

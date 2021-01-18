@@ -3,7 +3,7 @@
     <p class="link-card__original-link">{{ originalLink }}</p>
     <hr class="link-card__divider" />
     <div class="link-card__new-link-wrapper">
-      <p class="link-card__new-link"><a :href="newLink" target="_blank">{{ newLink }}</a></p>
+      <p class="link-card__new-link">{{ newLink }}</p>
       <button 
         class="link-card__copy-button button"
         :class="isCopiedClass"
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       originalLink: this.link.input,
-      newLink: this.link.relLink,
+      newLink: this.link.shortLink,
       isCopied: false,
     }
   },
@@ -95,10 +95,8 @@ export default {
   }
 
   &__new-link {
-    a {
-      color: $cyan;
-      font-weight: bold;
-    }
+    color: $cyan;
+    font-weight: bold;
   }
 
   &__copy-button {

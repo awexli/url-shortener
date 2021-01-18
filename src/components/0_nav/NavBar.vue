@@ -3,16 +3,23 @@
     <div class="navbar-brand">
       <!-- Logo -->
       <a class="navbar-item">
-        <img alt="Vue logo" src="@/assets/images/logo.svg" />
+        <img
+          alt="Vue logo"
+          src="@/assets/images/logo.svg"
+          width="102"
+          height="28"
+        />
       </a>
-      <NavBurger :isActive="isActive" @handle-burger-click="handleBurgerClick" />
+      <NavBurger
+        :isActive="isActive"
+        @handle-burger-click="handleBurgerClick"
+      />
     </div>
     <NavBarMenu :isActive="isActive" />
   </nav>
 </template>
 
 <script>
-
 import NavBurger from '@/components/0_nav/NavBurger';
 import NavBarMenu from '@/components/0_nav/NavBarMenu';
 
@@ -20,7 +27,7 @@ export default {
   name: 'Navbar',
   components: {
     NavBurger,
-    NavBarMenu
+    NavBarMenu,
   },
   data() {
     return {
